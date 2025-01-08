@@ -1,0 +1,64 @@
+div.main-body .custom{
+    color: blue;
+}
+/*specificity 점수 높이기
+적용되는 부분을 상세하게 설정하면 할수록 점수가 높아짐
+().().()....이런식으로 조금씩 높여서 우선순위를 가져올수있다!*/
+
+/*셀렉터 처음부터 쓸때 유의할것.
+미래에 덮어쓰기가 힘들어짐 ㅠㅜ
+보통은 클래스명 하나만 써서 작명하기로 하자.*/
+
+
+/*우선순위 높이기로도 가능하지만 왠만하면 쓰지말것.
+.() 10점
+#id 100점
+style 1000점
+!important 10000점 //어느 파일에 있던지 우선적으로 적용해준다
+--근본적인 해결책은 아님. 임시방편임*/
+
+.pseudo::first-letter {
+    color: red;
+    font-size: 30px;
+}
+
+/*:pseudo-class 다른 상태일때-마우스를 올리거나 클릭하거나 등등
+::pseudo-class 내부의 일부분만 디자인 할때
+*/
+
+input[type=file]::-webkit-file-upload-button{
+    background-color: rgba(188, 245, 245, 0.856);
+    border: none;
+}
+/*-webkit- 크롬에서만 적용되는 스타일
+요즘 브라우저들은 거의 다 됨
+Explorer -ms-
+Firefox -moz-*/
+
+/*appearance: none;
+-브라우저 기본 css안보이게*/
+
+/*shadow Dom으로 직접 태그를 만들수도있다
+임의의 태그 이름에 쉐도우 돔을 넣어서 태그입력시 뜨게 만들 수 있음!*/
+progress{
+    appearance: none;
+    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+}
+progress::-webkit-progress-inner-element{
+    appearance: none;
+    background-color: burlywood;
+    border-radius: 10px; 
+}
+
+
+progress::-webkit-progress-bar{
+    appearance: none;
+    background-color: burlywood;
+    border-radius: 10px; 
+}
+
+progress::-webkit-progress-value {
+    appearance: none;
+    background-color: orange;
+    border-radius: 10px; 
+}

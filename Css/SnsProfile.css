@@ -1,0 +1,42 @@
+.bg-box{
+	background-color: #f7f9fc;
+	width: 100%;
+	padding: 50px;
+
+}
+
+.pf-main{
+	margin: 50px;
+	width: 100%;
+    max-width: 95%;
+}
+
+.white-box {
+	background: white;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0.5px 0.5px 2px 1px #eee;
+}
+.img {
+    width: 180px;
+    height: 200px;
+    margin-top: 25px;
+}
+.pf-box{
+	padding: 50px;
+	text-align: left;
+	border-left: solid 3px #f7f9fc;
+}
+
+p,h2,button {
+	margin: 15px;
+}
+
+.text {
+	font-weight: 700;
+}
+
+.nav-style {
+	padding: 70px;
+}
+

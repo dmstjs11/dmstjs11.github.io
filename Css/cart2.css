@@ -1,0 +1,116 @@
+.cart-background {
+    width: 100%;
+    background-color: #c2d3de;
+    padding: 30px;
+}
+.cart-table {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.cart-table td,.cart-table th {
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
+}
+
+.table-long{
+    width: 300px;
+    /* 테이블의 최대폭이 있기때문에 최대한 이만큼 차지해주세요~ 라는뜻임.
+    다른 셀들의 최소폭은 유지되고 남는 칸 안에서 최대한 차지함.
+    맨 위의 한 칸을 늘리면 아랫칸들은 자동으로 늘어남!*/
+}
+
+.cart-table th:nth-child(2){
+    /*th 중  두번째요소를 선택해서 설정한다 ()안의 숫자로 선택!*/
+    width: 300px;
+}
+
+.btn{
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+    color: #ffffff;
+    cursor: pointer;/*버튼에 마우스를 댔을때 커서가 손가락 모양으로 바뀜!*/
+    
+}
+
+/*버튼에 커서를 올렸을때 색이 바뀌게 하기// pseudo-class*/
+.btn:hover{
+    background-color: chocolate;
+}
+/*포커스 된 상태(클릭하고나서)*/
+.btn:focus {
+    background-color: gray;
+}
+/*버튼을 누르고있을때*/
+.btn:active {
+    background-color: brown;
+    border: 2px solid black;
+}
+/*hover, focus, active 순서대로 넣는게 중요함!! 안그럼 동작안행*/
+
+.input-test{
+    font-size: 20px;
+}
+.input-test:hover {
+    border-bottom: 2px solid red;
+}
+
+.custom-link{
+    text-decoration: none;/*밑줄제거*/
+}
+.custom-link:link{
+    color: violet;
+}
+.custom-link:visited{
+    color: black;
+}
+
+/*중복되는 스타일을 줄일 수 있는 방법*/
+.btn-red {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+}
+
+.btn-blue {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: blue;
+}
+/*이런식으로 동일한 코드가 반복되면 비효율적임!!
+코드의 뼈와 살을 분리합시다^^*/
+.main-btn{/*뼈대!*/
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.bg-red{ /*버튼마다 다른점!*/ 
+    /*유틸리티 클래스! 색 외에도 폰트 사이즈 등등을 세부적으로 설정해 놓고
+    중복되는곳에 클래스 이름만 넣으면 된다!*/
+    background-color: red;
+}
+.bg-blue{
+    background-color: blue;
+}
+/*b__e--m 룰 따라해보기
+해당 덩어리의 쓰임새를 먼저 작명
+ex) profile__img
+    profile__title
+    profile__content
+    profile__button--blu
+    profile__button--red//이거보단 유틸리티 클래스 쓰는게 좋음! 중복줄이기!!
+    __가 싫으면 -대시만 써서 해도됩니당
+    리액트나 뷰 쓰면 덩어리 하나에만 종속되는 css파일을 만들수있기때문에
+    신경 안 써도 되는경우가 있다!
+    BEM/OOCSS검색해보기*/

@@ -1,0 +1,115 @@
+/* class가 생성되는것
+.이름{들어갈 코드}
+꼭 앞에 점 찍기
+이름 중복 피하기!!*/
+.profileimg {
+    width: 300px; 
+    display : block;
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 100px;
+    }
+
+.profilehead {
+    letter-spacing: 5px; 
+    text-align: center;
+    font-size: 18px;
+}
+
+.content {
+    text-align: center;
+}
+/*아래처럼 태그 이름 자체를 넣으면 해당태그의 모든 설정을 한번에 할 수 있음.
+기본 스타일 지정할때!*/
+p {
+    color: green;
+}
+
+
+/*#id :class와 비슷하게 사용가능
+하지만 주로 사용하진 않는다.*/
+#special {
+    text-align: center;
+    color: aqua;
+}
+
+/*CSS가 겹칠경우 우선순위가 있음
+#id > .class > 태그class
+우선순위가 높은쪽이 실행된다!!
+
+style로 Html에서 지정한건 제일 높은 순위를 가진다!
+*/
+
+.box {
+    width: 300px;
+    height: 100px;
+    background-color: bisque;
+    margin: 30px;/*상하좌우*/
+    padding: 40px;/*상하좌우*/
+    border-radius: 5px;/*테두리 둥글게*/
+    /*display : block; 가로 행을 전부 차지하게 해주세요//
+    <div>,<p>,<h>는 해당 속성을 기본으로가지고있어 생략가능함*/
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: 10px;
+    /*일부 스타일은 자동으로 inherit(상속)된다.
+    box내부의 글자에 자동 적용됨!
+    font family, color등등 */
+    color: cornsilk;
+    box-shadow: 5px 5px 5px burlywood;
+/*box-shadow:(양수 오른쪽, 음수 왼쪽)(양수 아래쪽,음수 위쪽)(블러)(그림자크기)(그림자가 박스안쪽에 생성) 색상상*/
+}
+
+a {
+    text-decoration-line : none;
+}
+a:link {
+    color: cornsilk;
+}
+a:visited {
+    color: lightcoral;
+}
+a:hover {
+    color: indianred;
+}
+a:active {
+    color: slateblue;
+}
+/*작성 순서에 유의해야한다.
+a:link, a:visited, a:hover, a:active 순으로 작성해야함!*/
+
+
+.container {
+    width: 800px;
+}
+.header {
+    width: 100%;/*부모요소 비례*/
+    height: 100px;
+    background: aquamarine;
+}
+.left-menu {
+    width: 20%;
+    height: 400px;
+    background: cornflowerblue;
+    /*float: left;
+    /*float :요소를 붕 띄워서 왼쪽정렬*/
+    display: inline-block;
+    vertical-align: top;
+    /*display: inline-block;을 사용하고 글자를 입력하면 레이아웃이 흐트러지는데,
+    //글자를 작성하면 baseline이 생기는데, div는 baseline 위부터 채우려고 함//
+    vertical-align: top;(상하정렬//위아래 설정가능)을 이용해 수정 할 수 있다*/
+}
+.right{
+    width: 80%;
+    height: 400px;
+    background: coral;
+    /*float: left;*/
+    display: inline-block;
+}
+.footer {
+    width: 100%;
+    height: 100px;
+    background: gray;
+    /*float를 쓰면 붕 뜨기때문에, 무시되고 바로 header밑으로 생성됨.*/
+    /*clear: both;/*float속성에서 오는 에러를 수정해준다//left,right설정가능*/
+}
